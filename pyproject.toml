@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "decode-spam-headers"
+version = "0.0.0"
+description = "A script that helps you understand why your E-Mail ended up in Spam"
+authors = ["Mariusz Banach <mb@binary-offensive.com>"]
+license = "MIT"
+readme = "README.md"
+# packages = [
+#     {include = "./decode-spam-headers.py" }
+# ]
+
+[tool.poetry.scripts]
+decode-spam-headers = "decode_spam_headers:main(sys.argv)"
+correlate-rules = "correlate_rules:main(sys.argv)"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dateutil = "^2.8.2"
+tldextract = "^5.0.0"
+packaging = "^23.2"
+dnspython = "^2.4.2"
+requests = "^2.31.0"
+colorama = "^0.4.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
